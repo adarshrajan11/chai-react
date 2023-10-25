@@ -1,51 +1,114 @@
 .offers {
-  width: 65%;
-  height: 16vh;
+  width: 100%;
+  height: auto;
+  /* Let the height adapt to content */
   display: flex;
-  margin: 100px;
-  padding: 0px 140px;
-  margin-bottom: 420px;
+  flex-direction: column;
+  padding: 20px;
+  /* Reduce padding for better mobile view */
+  margin-bottom: 40px;
   background: linear-gradient(180deg, #fde1ff 0%, #e1ffea22 60%);
 }
 
 .offers-left {
   flex: 1;
   display: flex;
-  margin-top: auto;
   flex-direction: column;
+  align-items: center;
+  /* Center content horizontally */
   justify-content: center;
+  /* Center content vertically */
+  text-align: center;
+  /* Center text content */
 }
 
 .offers-left h1 {
   color: #171717;
-  font-size: 80px;
+  font-size: 70px;
+  /* Increase font size for better appearance */
   font-weight: 600;
-
 }
 
 .offers-left p {
   color: #171717;
-  font-size: 22px;
+  font-size: 37px;
+  /* Increase font size for better appearance */
   font-weight: 600;
 }
 
 .offers-left button {
-  width: 282px;
-  height: 70px;
-  border-radius: 32px;
+  width: 200px;
+  /* Reduce button width for better mobile view */
+  height: 50px;
+  /* Reduce button height for better mobile view */
+  border-radius: 25px;
+  /* Adjust border-radius for better mobile view */
   background-color: #ec2929;
   border: none;
   color: white;
-  font-size: 22px;
+  font-size: 18px;
+  /* Reduce font size for better mobile view */
   font-weight: 500;
-  margin-top: 30px;
+  margin-top: 20px;
+  /* Reduce margin-top for better mobile view */
   cursor: pointer;
 }
 
-offers-right {
-  flex: 1;
+.offers-right {
   display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  padding-top: 50px;
+  justify-content: center;
+  /* Center the image horizontally */
+  padding-top: 20px;
+  /* Reduce padding for better mobile view */
+}
+
+/* Media query for tablet-sized screens */
+@media (min-width: 768px) {
+  .offers {
+    flex-direction: row;
+  }
+
+  .offers-left {
+    width: 50%;
+    align-items: flex-start;
+    /* Adjust alignment for tablet view */
+    padding: 20px;
+    /* Adjust padding for tablet view */
+  }
+
+  .offers-right {
+    width: 50%;
+    padding-top: 0;
+    /* Remove padding for tablet view */
+  }
+}
+
+/* Media query for larger screens, e.g., desktops */
+@media (min-width: 1024px) {
+  .offers-left {
+    width: 60%;
+    padding: 40px;
+    /* Adjust padding for desktop view */
+    text-align: left;
+    /* Adjust text alignment for desktop view */
+    padding-right: 20px;
+    /* Adjust padding for desktop view */
+    padding-left: 20px;
+    /* Adjust padding for desktop view */
+    font-size: 48px;
+    /* Increase font size for desktop view */
+    border-radius: 25px;
+    /* Adjust border-radius for desktop view */
+    margin-left: 300px;
+    /* Add some margin for better separation on desktop view */
+    padding-left: 20px;
+    /* Adjust padding for desktop view */
+  }
+
+  .offers-right {
+    padding-top: 0;
+    /* Remove padding-top for desktop view */
+    padding-right: 40px;
+    /* Adjust padding for desktop view */
+  }
 }
